@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         PlayerPrefs.SetInt("Score", 0);
-        PlayerPrefs.SetInt("RockMeter", 25);
+        PlayerPrefs.SetInt("RockMeter", 20);
     }
 
     void Update()

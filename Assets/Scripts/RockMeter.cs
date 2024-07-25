@@ -22,7 +22,7 @@ public class RockMeter : MonoBehaviour
     public void UpdateNeedle()
     {
         RM = PlayerPrefs.GetInt("RockMeter");
-        float normalizedRM = (RM - 25) / 25.0f; // Menormalkan RM antara -1 dan 1
+        float normalizedRM = (RM - 25) / 23.0f; // Menormalkan RM antara -1 dan 1
 
         // Misalnya, jarum bergerak sepanjang sumbu x silinder dengan rentang tertentu
         float needleRange = Cylinder.transform.localScale.x / 2; // Setengah lebar silinder

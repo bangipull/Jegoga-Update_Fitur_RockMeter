@@ -6,6 +6,7 @@ public class Activator : MonoBehaviour
 {
     private List<GameObject> notesInTrigger = new List<GameObject>();
     GameObject GameManager;
+    private bool isPaused = false;
 
     private void Start()
     {
@@ -18,6 +19,10 @@ public class Activator : MonoBehaviour
 
     void Update()
     {
+
+        if (isPaused)
+            return;
+
         // Deteksi sentuhan pada layar
         for (int i = 0; i < Input.touchCount; i++)
         {
@@ -45,6 +50,16 @@ public class Activator : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Pause()
+    {
+        isPaused = true;
+    }
+
+    public void Resume()
+    {
+        isPaused = false;
     }
 
     void OnTriggerEnter(Collider other)
